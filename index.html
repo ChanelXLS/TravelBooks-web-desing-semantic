@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book Travel</title>
+  <link rel="icon" type="image/png" href="travel.png">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header role="banner">
+    <h1>Book Travel</h1>
+    <nav aria-label="Navegación principal">
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#galeria">Galería</a></li>
+        <li><a href="#libros">Catálogo</a></li>
+        <li><a href="#formulario">Sugerir libro</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="inicio" role="main">
+    <!-- Sección de bienvenida -->
+    <section aria-labelledby="bienvenida">
+      <h2 id="bienvenida">Bienvenido/a</h2>
+      <p>
+        Bienvenido a <strong>Book Travel</strong>, una biblioteca digital que promueve la lectura accesible
+        para todas las personas. Aquí encontrarás obras clásicas y contemporáneas presentadas
+        en un entorno claro, elegante y minimalista.
+      </p>
+      <img
+        src="travel.png"
+        alt="Logo Book Travel mostrando un libro abierto con un papalote volando entre sus páginas"
+        width="400"
+      />
+    </section>
+
+    <!-- Galería accesible -->
+    <section id="galeria" aria-labelledby="galeria-titulo">
+      <h2 id="galeria-titulo">Galería de libros</h2>
+      <div class="galeria-container">
+
+        <figure>
+          <img src="flores en el atico.jpg"
+               alt="Portada del libro Flores en el ático con una flor amarilla sobre un fondo oscuro.">
+          <figcaption>
+            <strong>Flores en el ático</strong><br>
+            Un drama familiar lleno de secretos, amor prohibido y búsqueda de libertad.
+          </figcaption>
+        </figure>
+
+        <figure>
+          <img src="la hipotesis del amor.jpg"
+               alt="Portada del libro La hipótesis del amor mostrando a una pareja de científicos en un laboratorio.">
+          <figcaption>
+            <strong>La hipótesis del amor</strong><br>
+            Una comedia romántica ambientada en el mundo de la ciencia, con amor, humor y descubrimientos.
+          </figcaption>
+        </figure>
+
+        <figure>
+          <img src="el caballero.jpg"
+               alt="Portada del libro El caballero de la armadura oxidada mostrando un caballero brillante sobre un fondo azul.">
+          <figcaption>
+            <strong>El caballero de la armadura oxidada</strong><br>
+            Una fábula espiritual sobre la superación personal, el autoconocimiento y la libertad interior.
+          </figcaption>
+        </figure>
+
+        <figure>
+          <img src="lord of rings.jpg"
+               alt="Portada del libro El Señor de los Anillos mostrando el anillo dorado sobre un fondo oscuro.">
+          <figcaption>
+            <strong>El Señor de los Anillos</strong><br>
+            La épica travesía de la Tierra Media para destruir el Anillo Único y enfrentar al mal.
+          </figcaption>
+        </figure>
+
+      </div>
+    </section>
+
+    <!-- Catálogo -->
+    <section id="libros" aria-labelledby="tabla-libros">
+      <h2 id="tabla-libros">Catálogo destacado</h2>
+      <table>
+        <caption>Lista de libros más consultados</caption>
+        <thead>
+          <tr>
+            <th scope="col">Título</th>
+            <th scope="col">Autor</th>
+            <th scope="col">Género</th>
+            <th scope="col">Disponible</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>El Principito</td>
+            <td>Antoine de Saint-Exupéry</td>
+            <td>Ficción</td>
+            <td>Sí</td>
+          </tr>
+          <tr>
+            <td>Cien años de soledad</td>
+            <td>Gabriel García Márquez</td>
+            <td>Realismo mágico</td>
+            <td>No</td>
+          </tr>
+          <tr>
+            <td>Don Quijote de la Mancha</td>
+            <td>Miguel de Cervantes</td>
+            <td>Clásico</td>
+            <td>Sí</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Formulario -->
+    <section id="formulario" aria-labelledby="sugerir">
+      <h2 id="sugerir">Sugerir un libro</h2>
+      <form id="bookForm" aria-describedby="ayuda-formulario">
+        <p id="ayuda-formulario">
+          Completa el siguiente formulario para sugerir un nuevo título para nuestro catálogo.
+        </p>
+
+        <label for="nombre">Tu nombre:</label>
+        <input type="text" id="nombre" name="nombre" required />
+
+        <label for="correo">Correo electrónico:</label>
+        <input type="email" id="correo" name="correo" required />
+
+        <label for="titulo">Título sugerido:</label>
+        <input type="text" id="titulo" name="titulo" required />
+
+        <button type="submit">Enviar sugerencia</button>
+      </form>
+
+      <p id="mensaje" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <p>© 2025 Book Travel | Lectura para todos</p>
+    <a href="#inicio" style="color:#fff;text-decoration:underline;">Volver al inicio</a>
+  </footer>
+
+  <script src="script.js"></script>
+  
+</body>
+</html>
