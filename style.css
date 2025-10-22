@@ -6,6 +6,13 @@
   --blanco: #ffffff;
 }
 
+/* --- Corrige desplazamiento con header fijo --- */
+html {
+  scroll-behavior: smooth;     
+  scroll-padding-top: 100px;    
+}
+
+
 * {
   box-sizing: border-box;
 }

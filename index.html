@@ -11,20 +11,19 @@
 <body>
   <header role="banner">
     <h1>Book Travel</h1>
-    <nav aria-label="Navegación principal">
+     <nav role="navigation" aria-label="Navegación principal">
       <ul>
         <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#galeria">Galería</a></li>
-        <li><a href="#libros">Catálogo</a></li>
-        <li><a href="#formulario">Sugerir libro</a></li>
+        <li><a href="#galeria-titulo">Galería</a></li>
+        <li><a href="#tabla-libros">Catálogo</a></li>
+        <li><a href="#sugerir">Sugerir libro</a></li>
       </ul>
     </nav>
   </header>
 
-  <main id="inicio" role="main">
+  <main role="main" id="inicio">
     <!-- Sección de bienvenida -->
-    <section aria-labelledby="bienvenida">
-      <h2 id="bienvenida">xBienvenido/a</h2>
+      <h2 id="bienvenida">Bienvenido/a</h2>
       <p>
         Bienvenido a <strong>Book Travel</strong>, una biblioteca digital que promueve la lectura accesible
         para todas las personas. Aquí encontrarás obras clásicas y contemporáneas presentadas
@@ -35,10 +34,8 @@
         alt=""
         width="400"
       /> 
-    </section>
 
     <!-- Galería accesible -->
-    <section id="galeria" aria-labelledby="galeria-titulo">
       <h2 id="galeria-titulo">Galería de libros</h2>
       <div class="galeria-container">
 
@@ -79,10 +76,8 @@
         </figure>
 
       </div>
-    </section>
 
     <!-- Catálogo -->
-    <section id="libros" aria-labelledby="tabla-libros">
       <h2 id="tabla-libros">Catálogo destacado</h2>
       <table>
         <caption>Lista de libros más consultados</caption>
@@ -96,29 +91,27 @@
         </thead>
         <tbody>
           <tr>
-            <td>El Principito</td>
+            <th scope="row">El Principito</th>
             <td>Antoine de Saint-Exupéry</td>
             <td>Ficción</td>
             <td>Sí</td>
           </tr>
           <tr>
-            <td>Cien años de soledad</td>
+            <th scope="row">Cien años de soledad</th>
             <td>Gabriel García Márquez</td>
             <td>Realismo mágico</td>
             <td>No</td>
           </tr>
           <tr>
-            <td>Don Quijote de la Mancha</td>
+            <th scope="row">Don Quijote de la Mancha</th>
             <td>Miguel de Cervantes</td>
             <td>Clásico</td>
             <td>Sí</td>
           </tr>
         </tbody>
       </table>
-    </section>
 
     <!-- Formulario -->
-    <section id="formulario" aria-labelledby="sugerir">
       <h2 id="sugerir">Sugerir un libro</h2>
       <form id="bookForm" aria-describedby="ayuda-formulario">
         <p id="ayuda-formulario">
@@ -138,7 +131,6 @@
       </form>
 
       <p id="mensaje" aria-live="polite"></p>
-    </section>
   </main>
 
   <footer role="contentinfo">
