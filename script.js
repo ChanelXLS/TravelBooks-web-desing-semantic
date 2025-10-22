@@ -22,19 +22,32 @@ window.addEventListener("scroll", () => {
   }
 });
 
-const resultados = document.getElementById("resultados");
+// --- BUSCADOR EN CATÁLOGO CON ESTADO ---
+const buscador = document.getElementById("buscador");
+const filas = document.querySelectorAll("table tbody tr");
+const estado = document.getElementById("estado-busqueda");
 
-buscador.addEventListener("input", function() {
-  const texto = this.value.toLowerCase();
-  let contador = 0;
+buscador.addEventListener("input", function () {
+  const texto = this.value.toLowerCase().trim();
+  let coincidencias = 0;
 
   filas.forEach(fila => {
     const visible = fila.textContent.toLowerCase().includes(texto);
-    fila.style.display = visible ? "" : "none";
-    if (visible) contador++;
+    fila.style.display = visible || texto === "" ? "" : "none";
+    if (visible) coincidencias++;
   });
 
-  resultados.textContent = `Se encontraron ${contador} resultados.`;
+  if (texto === "") {
+    estado.textContent = "Empieza a escribir...";
+    estado.style.color = "#003c6d";
+  } else if (coincidencias > 0) {
+    estado.textContent = "✅ Sí lo tenemos en stock.";
+    estado.style.color = "green";
+  } else {
+    estado.textContent = "❌ No tenemos este título, ¡sugierelo!";
+    estado.style.color = "red";
+  }
 });
+
 
 

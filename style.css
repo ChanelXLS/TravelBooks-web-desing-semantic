@@ -221,11 +221,19 @@ footer {
 }
 
 
+/* --- CONTENEDOR DEL BUSCADOR --- */
+.buscador-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  margin: 1.5em auto;
+  flex-wrap: wrap;
+}
+
 #buscador {
-  width: 100%;
+  flex: 1 1 300px;
   max-width: 400px;
-  display: block;
-  margin: 1em auto;
   padding: 0.6em;
   font-size: 1em;
   border: 2px solid var(--dorado);
@@ -237,4 +245,12 @@ footer {
 #buscador:focus {
   border-color: var(--dorado-oscuro);
   box-shadow: 0 0 5px rgba(0, 60, 109, 0.3);
+}
+
+#estado-busqueda {
+  font-size: 0.95em;
+  color: var(--dorado-oscuro);
+  font-weight: 600;
+  text-align: left;
+  min-width: 200px;
 }
