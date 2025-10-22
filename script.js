@@ -22,3 +22,19 @@ window.addEventListener("scroll", () => {
   }
 });
 
+const resultados = document.getElementById("resultados");
+
+buscador.addEventListener("input", function() {
+  const texto = this.value.toLowerCase();
+  let contador = 0;
+
+  filas.forEach(fila => {
+    const visible = fila.textContent.toLowerCase().includes(texto);
+    fila.style.display = visible ? "" : "none";
+    if (visible) contador++;
+  });
+
+  resultados.textContent = `Se encontraron ${contador} resultados.`;
+});
+
+

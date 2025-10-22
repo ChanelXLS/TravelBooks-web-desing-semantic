@@ -79,6 +79,17 @@
 
     <!-- Catálogo -->
       <h2 id="tabla-libros">Catálogo destacado</h2>
+<label for="buscador" class="visually-hidden">Buscar libro</label>
+<input 
+  type="text" 
+  id="buscador" 
+  placeholder="🔍 Buscar libro por título, autor o género..."
+  aria-label="Buscar libro por título, autor o género"
+/>
+
+<!-- 🧏‍♀️ Resultados accesibles para lector de pantalla -->
+<p id="resultados" aria-live="polite"></p>
+
       <table>
         <caption>Lista de libros más consultados</caption>
         <thead>

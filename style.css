@@ -219,3 +219,22 @@ footer {
   padding: 1em;
   margin-top: 2em;
 }
+
+
+#buscador {
+  width: 100%;
+  max-width: 400px;
+  display: block;
+  margin: 1em auto;
+  padding: 0.6em;
+  font-size: 1em;
+  border: 2px solid var(--dorado);
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+#buscador:focus {
+  border-color: var(--dorado-oscuro);
+  box-shadow: 0 0 5px rgba(0, 60, 109, 0.3);
+}
